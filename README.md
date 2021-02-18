@@ -1,2 +1,2 @@
-# growth-tweets
-Repository of Growth Tweets
+# Growth Tweets by Landing Letter
+
