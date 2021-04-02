@@ -273,6 +273,13 @@
     </style>
     <script src="https://ackee.growthtweets.link/getdata.js"></script>
     <script>
+        const attributes = ackeeTracker.attributes(true);
+        const customAttributes = {
+            ...attributes,
+            siteLocation: 'https://www.landingletter.com/growth-tweets.htmls',
+        }
+    </script>
+    <script>
         ackeeTracker.create('https://ackee.growthtweets.link', {
             detailed: true,
             ignoreLocalhost: true,
