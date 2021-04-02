@@ -1680,18 +1680,13 @@
         }
         const instance = ackeeTracker.create({
             server: 'https://ackee.growthtweets.link',
-            domainId: '311e952f-e9cf-4085-a610-040d72247440'
+            domainId: '311e952f-e9cf-4085-a610-040d72247440',
+            detailed: true
         })
 
         instance.record(customAttributes);
     </script>
-    <script>
-        ackeeTracker.create('https://ackee.growthtweets.link', {
-            detailed: true,
-            ignoreLocalhost: true,
-            ignoreOwnVisits: true
-        }).record('311e952f-e9cf-4085-a610-040d72247440')
-    </script>
+
     <script async defer data-skip-dnt="true" src="https://sa.landingletter.com/latest.js"></script>
     <noscript><img src="https://sa.landingletter.com/noscript.gif" alt="" /></noscript>
 
