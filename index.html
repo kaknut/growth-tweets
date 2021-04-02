@@ -279,7 +279,8 @@
         <nav class="unify navbar is-fixed-top" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="https://www.growthtweets.link">
-                    <img src="https://www.growthtweets.link/growth-tweets-logo.png" alt="Growth Tweets Logo" style="max-height: 2rem;">
+                    <img src="https://www.growthtweets.link/growth-tweets-logo.png" alt="Growth Tweets Logo"
+                        style="max-height: 2rem;">
                 </a>
 
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -1673,18 +1674,11 @@
     </script>
     <script src="https://ackee.growthtweets.link/getdata.js"></script>
     <script>
-        const attributes = ackeeTracker.attributes(true);
-        const customAttributes = {
-            ...attributes,
-            siteLocation: 'https://www.landingletter.com/growth-tweets.html',
-        }
-        const instance = ackeeTracker.create({
-            server: 'https://ackee.growthtweets.link',
-            domainId: '311e952f-e9cf-4085-a610-040d72247440',
-            detailed: true
-        })
-
-        instance.record(customAttributes);
+        ackeeTracker.create('https://ackee.growthtweets.link', {
+            detailed: true,
+            ignoreLocalhost: true,
+            ignoreOwnVisits: true
+        }).record('311e952f-e9cf-4085-a610-040d72247440')
     </script>
 
     <script async defer data-skip-dnt="true" src="https://sa.landingletter.com/latest.js"></script>
@@ -1692,11 +1686,11 @@
 
     <script>
         function saLoaded() {
-          // Always check for the function before using it.
-          // The script might be blocked or not loaded for other reasons.
-          if (window.sa_pageview) window.sa_pageview('/growth-tweets.html');
+            // Always check for the function before using it.
+            // The script might be blocked or not loaded for other reasons.
+            if (window.sa_pageview) window.sa_pageview('/growth-tweets.html');
         }
-      </script>
+    </script>
     <script async defer data-skip-dnt="true" data-hostname="landingletter.com" data-auto-collect="false"
         onload="saLoaded()" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     <noscript><img src="https://queue.simpleanalyticscdn.com/hello.gif" alt=""
