@@ -4,7 +4,7 @@
 
   "rewrites": [
 
-    { "source": "/about", "destination": "/about-our-company.html" },
+    { "source": "/about", "destination": "https://landingletter.com" },
 
     { "source": "/resize/:width/:height", "destination": "/api/sharp" },
 
